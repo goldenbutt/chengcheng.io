@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="stylesheet" href="https://use.typekit.net/rlz3wss.css">
+</head>
+
+<style>
+
+html {
+  scroll-behavior: smooth;
+  width:100%;
+  height:100%;
+}
+
+.box{
+margin-top: 10%;
+margin-left: 10%;
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+width: 23%;
+height: 4500px;
+background-color: black;
+display:inline-block;
+float:left;
+}
+
+.myth {
+font-family: kepler-std-display, serif;
+font-weight: 550;
+font-style: normal;
+font-size: 2.6em;
+line-height: 0.9;
+margin: auto;
+}
+
+.albert {
+color:white;
+font-family: kepler-std-display, serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.2em;
+text-align:left;
+padding:5%;
+transition: 0.3s;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding:5%;
+  text-decoration: none;
+}
+
+.content {
+font-family: kepler-std-display, serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.2em;
+}
+
+a {
+transition: background-color 0.5s ease-out;
+}
+
+a:hover {
+color:black;
+background-color:white;
+}
+
+#AS{
+width:55%;
+height:auto;
+color:black;
+display:inline-block;
+float:left;
+padding-left:3%;
+font-family: kepler-std, serif;
+font-weight: 200;
+font-style: normal;
+font-size: 1.2em;
+line-height:1.6;
+}
+
+#AW{
+width:55%;
+height:auto;
+color:black;
+display:inline-block;
+float:left;
+padding-left:3%;
+font-family: kepler-std, serif;
+font-weight: 200;
+font-style: normal;
+font-size: 1.2em;
+line-height:1.6;
+display: none;
+}
+
+#PS{
+width:55%;
+height:auto;
+color:black;
+display:inline-block;
+float:left;
+padding-left:3%;
+font-family: kepler-std, serif;
+font-weight: 200;
+font-style: normal;
+font-size: 1.2em;
+line-height:1.6;
+display: none;
+}
+
+#AF{
+width:55%;
+height:auto;
+color:black;
+display:inline-block;
+float:left;
+padding-left:3%;
+font-family: kepler-std, serif;
+font-weight: 200;
+font-style: normal;
+font-size: 1.2em;
+line-height:1.6;
+display: none;
+}
+
+#title{
+text-indent: 50px;
+letter-spacing: 1px;
+}
+
+#chapter{
+text-align:center;
+font-style:italic;
+}
+
+#text{
+text-indent: 50px;
+}
+
+#note1{
+border-bottom: 1px dotted black;
+}
+
+#note1text{
+font-size:0.7em;
+visibility: hidden;
+width: 18%;
+color: white;
+text-align: left;
+position: absolute;
+right:70%;
+}
+
+#note1:hover #note1text{
+visibility: visible;
+}
+
+#note2{
+border-bottom: 1px dotted black;
+}
+
+#note2text{
+font-size:0.7em;
+visibility: hidden;
+width: 18%;
+color: white;
+text-align: left;
+position: absolute;
+right:70%;
+}
+
+#note2:hover #note2text{
+visibility: visible;
+}
+
+#note3{
+border-bottom: 1px dotted black;
+}
+
+#note3text{
+font-size:0.7em;
+visibility: hidden;
+width: 18%;
+color: white;
+text-align: left;
+position: absolute;
+right:70%;
+}
+
+#note3:hover #note3text{
+visibility: visible;
+}
+
+#note4{
+border-bottom: 1px dotted black;
+}
+
+#note4text{
+font-size:0.7em;
+visibility: hidden;
+width: 18%;
+color: white;
+text-align: left;
+position: absolute;
+right:70%;
+}
+
+#note4:hover #note4text{
+visibility: visible;
+}
+
+.fadeout {
+height:100px;
+width:100%;
+position:fixed;
+bottom:0;
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 60%);
+}
+
+.fadeout1 {
+height:100px;
+width:100%;
+position:fixed;
+top:0;
+background: linear-gradient(to top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 60%);
+}
+</style>
+
+<body>
+
+<div class="fadeout"></div>
+<div class="fadeout1"></div>
+
+<div class="box">
+<ul>
+  <li><p class="myth"><a href="https://books.google.com/books/about/The_Myth_of_Sisyphus.html?id=Xmp0DwAAQBAJ&printsec=frontcover&source=kp_read_button#v=onepage&q&f=false">THE MYTH OF SISYPHUS</a></p></li>
+  <p class="albert">BY ALBERT CAMUS</a></p>
+  <div class="con">
+	<li><a onclick="ASFunction()">Absurdity and Suicide</a></li>
+  	<li><a onclick="AWFunction()">Absurd Walk</a></li>
+  	<li><a onclick="PSFunction()">Philosophical Suicide</a></li>
+  	<li><a onclick="AFFunction()">Absurd Freedom</a></li>
+  </div>
+</ul>
+</div>
+
+<script>
+function ASFunction() {
+document.getElementById("AS").style.display = "inline-block";
+document.getElementById("AW").style.display = "none";
+document.getElementById("PS").style.display = "none";
+document.getElementById("AF").style.display = "none";
+}
+
+function AWFunction() {
+document.getElementById("AS").style.display = "none";
+document.getElementById("AW").style.display = "inline-block";
+document.getElementById("PS").style.display = "none";
+document.getElementById("AF").style.display = "none";
+}
+
+function PSFunction() {
+document.getElementById("AS").style.display = "none";
+document.getElementById("AW").style.display = "none";
+document.getElementById("PS").style.display = "inline-block";
+document.getElementById("AF").style.display = "none";
+}
+
+function AFFunction() {
+document.getElementById("AS").style.display = "none";
+document.getElementById("AW").style.display = "none";
+document.getElementById("PS").style.display = "none";
+document.getElementById("AF").style.display = "inline-block";
+}
+
+</script>
+
+<div id="AS">
+<p id="title">AN ABSURD REASONING</p>
+<p id="chapter">Absurdity and Suicide</p>
+<p id="text">
+THERE is but one truly serious philosophical problem, and that is suicide. 
+Judging whether life is or is not worth living amounts to answering the fundamental question of philosophy. 
+All the rest— whether or not the world has three dimensions, whether the mind has nine or twelve categories—comes afterwards. 
+These are games; one must first answer. And if it is true, as Nietzsche claims, that a philosopher, to deserve our respect, 
+must preach by example, you can appreciate the importance of that reply, for it will precede the definitive act. 
+These are facts the heart can feel; yet they call for careful study before they become clear to the intellect.
+</p>
+<p id="text">
+If I ask myself how to judge that this question is more urgent than that, 
+I reply that one judges by the actions it entails. I have never seen anyone die for the ontological argument. 
+Galileo, who held a scientific truth of great importance, abjured it with the greatest ease as soon as it endangered his life. 
+In a certain sense, he did 
+<span id="note1">right.① <span id="note1text">From the point of view of the relative value of truth. On the other hand, from the point of view of virile behavior, this
+scholar's fragility may well make us smile.</span></span>
+That truth was not worth the stake. Whether the earth or the sun revolves around 
+the other is a matter of profound indifference. To tell the truth, it is a futile question. On the other hand, 
+I see many people die because they judge that life is not worth living. 
+I see others paradoxically getting killed for the ideas or illusions that give them a reason for living 
+(what is called a reason for living is also an excellent reason for dying). I therefore conclude that the meaning of life is the most urgent of questions. 
+How to answer it? On all essential problems 
+(I mean thereby those that run the risk of leading to death or those that intensify the passion of living) 
+there are probably but two methods of thought: the method of La Palisse and the method of Don Quixote. 
+Solely the balance between evidence and lyricism can allow us to achieve simultaneously emotion and lucidity. 
+In a subject at once so humble and so heavy with emotion, the learned and classical dialectic must yield, 
+one can see, to a more modest attitude of mind deriving at one and the same time from common sense and understanding.
+</p>
+
+<p id="text">
+Suicide has never been dealt with except as a social phenomenon. On the contrary, we are concerned here, at the outset, 
+with the relationship between individual thought and suicide. An act like this is prepared within the silence of the heart, 
+as is a great work of art. The man himself is ignorant of it. One evening he pulls the trigger or jumps. 
+Of an apartment-building manager who had killed himself I was told that he had lost his daughter five years before, 
+that he had changed greatly since, and that that experience had "undermined" him. A more exact word cannot be imagined. 
+Beginning to think is beginning to be undermined. Society has but little connection with such beginnings. 
+The worm is in man's heart. That is where it must be sought. 
+One must follow and understand this fatal game that leads from lucidity in the face of existence to flight from light.
+</p>
+
+<p id="text">
+There are many causes for a suicide, and generally the most obvious ones were not the most powerful. 
+Rarely is suicide committed (yet the hypothesis is not excluded) through reflection. 
+What sets off the crisis is almost always unverifiable. Newspapers often speak of "personal sorrows" or of "incurable illness." 
+These explanations are plausible. But one would have to know whether a friend of the desperate man had not that very day addressed him indifferently. 
+He is the guilty one. For that is enough to precipitate all the rancors and all the boredom still in 
+<span id="note2">suspension.②<span id="note2text">Let us not miss this opportunity to point out the relative character of this essay. 
+Suicide may indeed be related to much more honorable considerations—for example, the political suicides of protest, as they were called, 
+during the Chinese revolution.  </span></span>
+</p>
+
+<p id="text">
+But if it is hard to fix the precise instant, the subtle step when the mind opted for death, 
+it is easier to deduce from the act itself the consequences it implies. In a sense, and as in melodrama, 
+killing yourself amounts to confessing. It is confessing that life is too much for you or that you do not understand it. 
+Let's not go too far in such analogies, however, but rather return to everyday words. It is merely confessing that that "is not worth the trouble." 
+Living, naturally, is never easy. You continue making the gestures commanded by existence, for many reasons, the first of which is habit. 
+Dying voluntarily implies that you have recognized, even instinctively,
+the ridiculous character of that habit, the absence of any profound reason for living, 
+the insane character of that daily agitation, and the uselessness of suffering.
+
+<p id="text">
+What, then, is that incalculable feeling that deprives the mind of the sleep necessary to life? 
+A world that can be explained even with bad reasons is a familiar world. But, on the other hand, 
+in a universe suddenly divested of illusions and lights, man feels an alien, a stranger. 
+His exile is without remedy since he is deprived of the memory of a lost home or the hope of a promised land. 
+This divorce between man and his life, the actor and his setting, is properly the feeling of absurdity. 
+All healthy men having thought of their own suicide, it can be seen, without further explanation, 
+that there is a direct connection between this feeling and the longing for death.
+</p>
+
+<p id="text">
+The subject of this essay is precisely this relationship between the absurd and suicide, 
+the exact degree to which suicide is a solution to the absurd. 
+The principle can be established that for a man who does not cheat, 
+what he believes to be true must determine his action. 
+Belief in the absurdity of existence must then dictate his conduct. 
+It is legitimate to wonder, clearly and without false pathos, 
+whether a conclusion of this importance requires forsaking as rapidly as possible an incomprehensible condition. 
+I am speaking, of course, of men inclined to be in harmony with themselves.
+</p>
+
+<p id="text">
+Stated clearly, this problem may seem both simple and insoluble. 
+But it is wrongly assumed that simple questions involve answers that are no less simple and that evidence implies evidence. 
+A priori and reversing the terms of the problem, just as one does or does not kill oneself, it seems that there are but two philosophical solutions, 
+either yes or no. This would be too easy. But allowance must be made for those who, without concluding, continue questioning. 
+Here I am only slightly indulging in irony: this is the majority. I notice also that those who answer "no" act as if they thought "yes." 
+As a matter of fact, if I accept the Nietzschean criterion, they think "yes" in one way or another. On the other hand, 
+it often happens that those who commit suicide were assured of the meaning of life. These contradictions are constant. 
+It may even be said that they have never been so keen as on this point where, on the contrary, logic seems so desirable. 
+It is a commonplace to compare philosophical theories and the behavior of those who profess them. 
+But it must be said that of the thinkers who refused a meaning to life none except Kirilov who belongs to literature, 
+Peregrinos who is torn of 
+<span id="note3">legend,③<span id="note3text">I have heard of an emulator of Peregrinos, a post-war writer who, after having finished his first book, committed suicide to attract
+attention to his work. Attention was in fact attracted, but the book was judged no good.</span></span>
+ and Jules Lequier who belongs to hypothesis, admitted his logic to the point of refusing that life. 
+Schopenhauer is often cited, as a fit subject for laughter, because he praised suicide while seated at a well-set table. 
+This is no subject for joking. That way of not taking the tragic seriously is not so grievous, but it helps to judge a man.
+</p>
+
+<p id="text">
+In the face of such contradictions and obscurities must we conclude that there is no relationship between the opinion one has about life 
+and the act one commits to leave it? Let us not exaggerate in this direction. 
+In a man' s attachment to life there is something stronger than all the ills in the world. 
+The body' s judgment is as good as the mind's, and the body shrinks from annihilation. 
+We get into the habit of living before acquiring the habit of thinking. 
+In that race which daily hastens us toward death, the body maintains its irreparable lead. 
+In short, the essence of that contradiction lies in what I shall call the act of eluding because 
+it is both less and more than diversion in the Pascalian sense. Eluding is the invariable game. The typical act of eluding, 
+the fatal evasion that constitutes the third theme of this essay, is hope. 
+Hope of another life one must "deserve" or trickery of those who live not for life itself but for some great idea that will transcend it, 
+refine it, give it a meaning, and betray it.
+</p>
+
+<p id="text">
+Thus everything contributes to spreading confusion. Hitherto, and it has not been wasted effort, 
+people have played on words and pretended to believe that refusing to grant a meaning to life necessarily leads to declaring that it is not worth living. 
+In truth, there is no necessary common measure between these two judgments. 
+One merely has to refuse to be misled by the confusions, divorces, and inconsistencies previously pointed out. 
+One must brush everything aside and go straight to the real problem. One kills oneself because life is not worth living, 
+that is certainly a truth—yet an unfruitful one because it is a truism. But does that insult to existence, 
+that flat denial in which it is plunged come from the fact that it has no meaning? 
+Does its absurdity require one to escape it through hope or suicide—this is what must be clarified, 
+hunted down, and elucidated while brushing aside all the rest. Does the Absurd dictate death? 
+This problem must be given priority over others, outside all methods of thought and all exercises of the disinterested mind. 
+Shades of meaning, contradictions, the psychology that an "objective" mind can always introduce 
+into all problems have no place in this pursuit and this passion. It calls simply for an unjust—in other words, 
+logical—thought. That is not easy. It is always easy to be logical. It is almost impossible to be logical to the bitter end. 
+Men who die by their own hand consequently follow to its conclusion their emotional inclination. 
+Reflection on suicide gives me an opportunity to raise the only problem to interest me: 
+is there a logic to the point of death? I cannot know unless I pursue, without reckless passion, 
+in the sole light of evidence, the reasoning of which I am here suggesting the source. This is what I call an absurd reasoning.
+ Many have begun it. I do not yet know whether or not they kept to it.
+ </p>
+ 
+ <p id="text">
+ When Karl Jaspers, revealing the impossibility of constituting the world as a unity, exclaims: 
+ "This limitation leads me to myself, where I can no longer withdraw behind an objective point of view that I am merely representing, 
+ where neither I myself nor the existence of others can any longer become an object for me," 
+ he is evoking after many others those waterless deserts where thought reaches its confines. 
+ After many others, yes indeed, but how eager they were to get out of them! At that last crossroad where thought hesitates, 
+ many men have arrived and even some of the humblest. They then abdicated what was most precious to them, 
+ their life. Others, princes of the mind, abdicated likewise, but they initiated the suicide of their thought in its purest revolt. 
+ The real effort is to stay there, rather, in so far as that is possible, and to examine closely the odd vegetation of those distant regions.
+  Tenacity and acumen are privileged spectators of this inhuman show in which absurdity, hope, and death carry on their dialogue. 
+  The mind can then analyze the figures of that elementary yet subtle dance before illustrating them and reliving them itself.
+  <br>
+  <br>
+  <br>
+</p>
+</div>
+
+<div id="AW">
+<p id="title">AN ABSURD REASONING</p>
+<p id="chapter">Absurd Walls</p>
+<p id="text">
+Like great works, deep feelings always mean more than they are conscious of saying. 
+The regularity of an impulse or a repulsion in a soul is encountered again in habits of doing or thinking,
+ is reproduced in consequences of which the soul itself knows nothing. Great feelings take with them their own universe, 
+ splendid or abject. They light up with their passion an exclusive world in which they recognize their climate. There is 
+ a universe of jealousy, of ambition, of selfishness, or of generosity. A universe—in other words, a metaphysic and an 
+ attitude of mind. What is true of already specialized feelings will be even more so of emotions basically as indeterminate,
+  simultaneously as vague and as "definite," as remote and as "present" as those furnished us by beauty or aroused by absurdity.
+</p>
+<p id="text">
+At any streetcorner the feeling of absurdity can strike any man in the face. As it is, 
+in its distressing nudity, in its light without effulgence, it is elusive. But that very difficulty deserves reflection. 
+It is probably true that a man remains forever unknown to us and that there is in him something irreducible that escapes us. 
+But practically I know men and recognize them by their behavior, by the totality of their deeds, by the consequences caused 
+in life by their presence. Likewise, all those irrational feelings which offer no purchase to analysis. I can de-fine them
+ practically, appreciate them practically, by gathering together the sum of their consequences in the domain of the intelligence, 
+ by seizing and noting all their aspects, by outlining their universe. It is certain that apparently, though I have seen the same 
+ actor a hundred times, I shall not for that reason know him any better personally. Yet if I add up the heroes he has personified 
+ and if I say that I know him a little better at the hundredth character counted off, this will be felt to contain an element of 
+ truth. For this apparent paradox is also an apologue. There is a moral to it. It teaches that a man defines himself by his 
+ make- believe as well as by his sincere impulses. There is thus a lower key of feelings, inaccessible in the heart but 
+ partially disclosed by the acts they imply and the attitudes of mind they assume. It is clear that in this way I am 
+ defining a method. But it is also evident that that method is one of analysis and not of knowledge. For methods 
+ imply metaphysics; unconsciously they disclose conclusions that they often claim not to know yet. Similarly, the 
+ last pages of a book are already contained in the first pages. Such a link is inevitable. The method defined here 
+ acknowledges the feeling that all true knowledge is impossible. Solely appearances can be enumerated and the climate make itself felt.
+</p>
+
+<p id="text">
+Perhaps we shall be able to overtake that elusive feeling of absurdity in the different but 
+closely related worlds of intelligence, of the art of living, or of art itself. The climate
+ of absurdity is in the beginning. The end is the absurd universe and that attitude of mind 
+ which lights the world with its true colors to bring out the privileged and implacable visage 
+ which that attitude has discerned in it.
+</p>
+
+<p id="text">
+All great deeds and all great thoughts have a ridiculous beginning. Great works are often born on a
+street-corner or in a restaurant' s revolving door. So it is with absurdity. 
+The absurd world more than others derives its nobility from that abject birth. In certain situations, 
+replying "nothing" when asked what one is thinking about may be pretense in a man. Those who are loved
+ are well aware of this. But if that reply is sincere, if it symbolizes that odd state of soul in which
+  the void becomes eloquent, in which the chain of daily gestures is broken, 
+  in which the heart vainly seeks the link that will connect it again, then it is as
+   it were the first sign of absurdity.
+</p>
+
+<p id="text">
+It happens that the stage sets collapse. Rising, street-car, four hours in the office or the factory,
+ meal, street-car, four hours of work, meal, sleep, and Monday Tuesday Wednesday Thursday Friday and 
+ Saturday according to the same rhythm—this path is easily followed most of the time. But one day the
+  "why" arises and everything begins in that weariness tinged with amazement. "Begins"—this is important. 
+  Weariness comes at the end of the acts of a mechanical life, but at the same time it inaugurates the impulse of 
+  consciousness. It awakens consciousness and provokes what follows. What follows is the gradual return into the 
+  chain or it is the definitive awakening. At the end of the awakening comes, in time, the consequence: suicide or 
+  recovery. In itself weariness has something sickening about it. Here, I must conclude that it is good. For 
+  everything begins with consciousness and nothing is worth anything except through it. There is nothing original about 
+  these remarks. But they are obvious; that is enough for a while, during a sketchy reconnaissance in the origins of the absurd. 
+  Mere "anxiety," as Heidegger says, is at the source of everything.
+</p>
+
+<p id="text">
+Likewise and during every day of an unillustrious life, time carries us. But a moment always comes when we have to carry it. 
+We live on the future: "tomorrow," "later on," "when you have made your way," "you will understand when you are old enough." 
+Such irrelevancies are wonderful, for, after all, it' s a matter of dying. Yet a day comes when a man notices or says that he is thirty. 
+Thus he asserts his youth. But simultaneously he situates himself in relation to time. He takes his place in it. 
+He admits that he stands at a certain point on a curve that he acknowledges having to travel to its end. He belongs to time, 
+and by the horror that seizes him, he recognizes his worst enemy. Tomorrow, he was longing for tomorrow, 
+whereas everything in him ought to reject it. That revolt of the flesh is the <span id="note4">absurd.④<span id="note4text">
+But not in the proper sense. This is not a definition, but rather an enumeration of the feelings that may admit of the absurd.
+Still, the enumeration finished, the absurd has nevertheless not been exhausted.</span></span>
+</p>
+
+<p id="text">
+A step lower and strangeness creeps in: perceiving that the world is "dense," 
+sensing to what a degree a stone is foreign and irreducible to us, 
+with what intensity nature or a landscape can negate us. At the heart of all beauty lies something inhuman, 
+and these hills, the softness of the sky, the outline of these trees at this very minute lose the illusory 
+meaning with which we had clothed them, henceforth more remote than a lost paradise. The primitive hostility 
+of the world rises up to face us across millennia. For a second we cease to understand it because for centuries 
+we have understood in it solely the images and designs that we had attributed to it beforehand, 
+because henceforth we lack the power to make use of that artifice. The world evades us because it becomes 
+itself again. That stage scenery masked by habit becomes again what it is. It withdraws at a distance from us. 
+Just as there are days when under the familiar face of a woman, we see as a stranger her we had loved months or 
+years ago, perhaps we shall come even to desire what suddenly leaves us so alone. But the time has not yet come. 
+Just one thing: that denseness and that strangeness of the world is the absurd.
+</p>
+
+<p id="text">
+Men, too, secrete the inhuman. At certain moments of lucidity, 
+the mechanical aspect of their gestures, their meaningless pantomime makes silly everything that surrounds them. 
+A man is talking on the telephone behind a glass partition; you cannot hear him, 
+but you see his incomprehensible dumb show: you wonder why he is alive. This discomfort in the face of man' s own inhumanity, 
+this incalculable tumble before the image of what we are, this "nausea," as a writer of today calls it, is also the absurd.
+ Likewise the stranger who at certain seconds comes to meet us in a mirror, the familiar and yet alarming brother we 
+ encounter in our own photographs is also the absurd.
+</p>
+
+<p id="text">
+I come at last to death and to the attitude we have toward it. 
+On this point everything has been said and it is only proper to avoid pathos. 
+Yet one will never be sufficiently surprised that everyone lives as if no one "knew." 
+This is because in reality there is no experience of death. Properly speaking, 
+nothing has been experienced but what has been lived and made conscious. 
+Here, it is barely possible to speak of the experience of others' deaths. It is a substitute, 
+an illusion, and it never quite convinces us. That melancholy convention cannot be persuasive. 
+The horror comes in reality from the mathematical aspect of the event. If time frightens us, 
+this is because it works out the problem and the solution comes afterward. 
+All the pretty speeches about the soul will have their contrary convincingly proved, 
+at least for a time. From this inert body on which a slap makes no mark the soul has disappeared. 
+This elementary and definitive aspect of the adventure constitutes the absurd feeling. Under the fatal 
+lighting of that destiny, its uselessness becomes evident. 
+No code of ethics and no effort are justifiable a priori in the face of the cruel mathematics that command our condition.
+</p>
+
+<p id="text">
+Let me repeat: all this has been said over and over. 
+I am limiting myself here to making a rapid classification and to pointing out these obvious themes. 
+They run through all literatures and all philosophies. Everyday conversation feeds on them. 
+There is no question of reinventing them. But it is essential to be sure of these facts in order to be able to question oneself 
+subsequently on the primordial question. I am interested—let me repeat again—not so much in absurd discoveries as in their consequences. 
+If one is assured of these facts, what is one to conclude, how far is one to go to elude nothing? 
+Is one to die voluntarily or to hope in spite of everything? Beforehand, 
+it is necessary to take the same rapid inventory on the plane of the intelligence.
+ </p>
+ The mind' s first step is to distinguish what is true from what is false. However, as soon as thought
+reflects on itself, what it first discovers is a contradiction. Useless to strive to be convincing in this case. 
+Over the centuries no one has furnished a clearer and more elegant demonstration of the business than Aristotle: 
+"The often ridiculed consequence of these opinions is that they destroy themselves. 
+For by asserting that all is true we assert the truth of the contrary assertion and consequently the falsity of our own thesis 
+(for the contrary assertion does not admit that it can be true). And if one says that all is false, that assertion is itself false. 
+If we declare that solely the assertion opposed to ours is false or else that solely ours is not false, 
+we are nevertheless forced to admit an infinite number of true or false judgments. 
+For the one who expresses a true assertion proclaims simultaneously that it is true, and so on ad infinitum."
+<br>
+<br>
+<br>
+TO BE CONTINUED...
+</div>
+
+<div id="PS">
+<p id="title">AN ABSURD REASONING</p>
+<p id="chapter">Philosophical Suicide</p>
+<p id="text">
+TO BE CONTINUED...
+</p>
+</div>
+
+<div id="AF">
+<p id="title">AN ABSURD REASONING</p>
+<p id="chapter">Absurd Freedom</p>
+<p id="text">
+TO BE CONTINUED...
+</p>
+</div>
+
+</body>
+</html>
